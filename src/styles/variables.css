@@ -1,0 +1,52 @@
+/* ==========================================================================
+   CINE—STREAM DESIGN SYSTEM VARIABLES ("Midnight Matinee")
+   Vintage cinema marquee meets modern editorial film magazine.
+   ========================================================================== */
+
+:root {
+  /* --- Midnight Matinee Color Palette --- */
+  --bg-primary: #0E0C0A;          /* Warm near-black base */
+  --bg-surface: #181410;          /* Warm dark timber/charcoal */
+  --bg-surface-elevated: #221B15; /* Card & modal surface */
+  --bg-surface-hover: #2C221A;    /* Interactive hover surface */
+  
+  --accent-amber: #F2A93B;        /* Marquee bulb amber (primary) */
+  --accent-amber-glow: rgba(242, 169, 59, 0.35);
+  --accent-amber-subtle: rgba(242, 169, 59, 0.12);
+  --accent-amber-border: rgba(242, 169, 59, 0.28);
+  
+  --accent-red: #D64530;          /* Ticket stub red (secondary) */
+  --accent-red-glow: rgba(214, 69, 48, 0.4);
+  --accent-red-subtle: rgba(214, 69, 48, 0.15);
+  
+  --text-cream: #F3E9D7;          /* High contrast editorial cream */
+  --text-muted: #9C9080;          /* Muted ticket stub metadata */
+  --text-dim: #6B6256;            /* Subtle borders & timestamps */
+  
+  --rating-green: #599E62;        /* High score color */
+  --rating-amber: #F2A93B;        /* Mid score color */
+  --rating-red: #D64530;          /* Low score color */
+
+  /* --- Editorial Typography --- */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  /* --- Spacing & Radii --- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+
+  /* --- Shadows & Glows --- */
+  --shadow-stub: 0 4px 20px rgba(0, 0, 0, 0.6);
+  --shadow-stub-hover: 0 14px 34px rgba(0, 0, 0, 0.8), 0 0 20px var(--accent-amber-glow);
+  --glow-marquee: 0 0 12px rgba(242, 169, 59, 0.5), 0 0 24px rgba(242, 169, 59, 0.2);
+
+  /* --- Transitions --- */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-lift: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+

@@ -1,0 +1,110 @@
+.cinema-home {
+  padding-bottom: 4rem;
+}
+
+/* API Notice Banner */
+.api-notice-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--accent-amber);
+  border-radius: var(--radius-md);
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.api-notice-icon {
+  flex-shrink: 0;
+  color: var(--accent-amber);
+}
+
+.api-notice-content {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--text-cream);
+  line-height: 1.5;
+}
+
+.api-notice-content code {
+  font-family: var(--font-mono);
+  background-color: var(--bg-surface-elevated);
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--radius-sm);
+  color: var(--accent-amber);
+  border: 1px solid var(--accent-amber-border);
+}
+
+/* Infinite Scroll Sentinel */
+.scroll-sentinel {
+  width: 100%;
+  height: 20px;
+  margin-top: 1rem;
+  pointer-events: none;
+}
+
+/* "Loading more reels…" Indicator */
+.loading-more-reels {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 2.5rem 0 1.5rem;
+  padding: 0.85rem 1.5rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--accent-amber-border);
+  border-radius: var(--radius-pill);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: var(--shadow-stub);
+}
+
+.reels-spool-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: reelSpin 2s linear infinite;
+}
+
+@keyframes reelSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-reels-text {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: var(--accent-amber);
+  text-transform: uppercase;
+}
+
+/* End of Catalog Notice */
+.catalog-end-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 3.5rem 0 1rem;
+  color: var(--text-muted);
+}
+
+.end-notice-rule {
+  flex: 1;
+  max-width: 160px;
+  height: 1px;
+  background-color: rgba(242, 169, 59, 0.2);
+}
+
+.end-notice-tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+}

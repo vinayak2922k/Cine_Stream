@@ -1,0 +1,110 @@
+/* Skeleton Ticket-Stub Card */
+.skeleton-stub {
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(242, 169, 59, 0.1);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Warm Tone Shimmer Animation */
+@keyframes warmShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    #181410 0%,
+    #251E17 40%,
+    #33291F 50%,
+    #251E17 60%,
+    #181410 100%
+  );
+  background-size: 200% 100%;
+  animation: warmShimmer 1.8s infinite ease-in-out;
+}
+
+/* Skeleton Poster */
+.skeleton-poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+}
+
+/* Perforation Divider */
+.skeleton-perforation {
+  position: relative;
+  height: 1px;
+  border-top: 2px dashed rgba(242, 169, 59, 0.15);
+  margin: 0;
+}
+
+.skeleton-notch {
+  position: absolute;
+  top: -8px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--bg-primary);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.skeleton-notch-left {
+  left: -9px;
+}
+
+.skeleton-notch-right {
+  right: -9px;
+}
+
+/* Skeleton Stub Body */
+.skeleton-body {
+  padding: 0.9rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  background-color: var(--bg-surface-elevated);
+}
+
+.skeleton-line {
+  height: 14px;
+  border-radius: var(--radius-sm);
+}
+
+.skeleton-title {
+  width: 78%;
+  height: 16px;
+}
+
+.skeleton-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skeleton-year {
+  width: 32%;
+  height: 12px;
+}
+
+.skeleton-badge {
+  width: 30px;
+  height: 20px;
+  border-radius: var(--radius-pill);
+}
+
+/* Grid layout for Skeletons matching MovieGrid */
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+

@@ -1,0 +1,310 @@
+.mood-matcher-panel {
+  margin: 1.5rem 0 2rem;
+  width: 100%;
+}
+
+.mood-matcher-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--accent-amber-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-stub);
+  position: relative;
+  overflow: hidden;
+}
+
+.mood-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.mood-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  color: var(--accent-amber);
+  text-transform: uppercase;
+}
+
+.mood-heading {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--text-cream);
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+}
+
+.mood-sparkle-icon {
+  color: var(--accent-amber);
+  opacity: 0.9;
+}
+
+.mood-form {
+  width: 100%;
+}
+
+.mood-input-wrapper {
+  display: flex;
+  gap: 0.75rem;
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--accent-amber-border);
+  border-radius: var(--radius-md);
+  padding: 0.4rem 0.5rem 0.4rem 1rem;
+  align-items: center;
+}
+
+.mood-input-wrapper:focus-within {
+  border-color: var(--accent-amber);
+  box-shadow: 0 0 14px var(--accent-amber-glow);
+}
+
+.mood-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-cream);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.mood-input::placeholder {
+  color: var(--text-muted);
+}
+
+.mood-submit-btn {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  background-color: var(--accent-amber);
+  color: #0E0C0A;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  white-space: nowrap;
+}
+
+.mood-submit-btn:hover:not(:disabled) {
+  background-color: #FFAE42;
+  transform: translateY(-1px);
+}
+
+.mood-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mood-status-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 0.85rem 1.2rem;
+  border-radius: var(--radius-md);
+}
+
+.loading-box {
+  background-color: rgba(242, 169, 59, 0.08);
+  border: 1px solid var(--accent-amber-border);
+  color: var(--accent-amber);
+}
+
+.projectionist-reel-spin {
+  display: flex;
+  animation: reelSpin 2s linear infinite;
+}
+
+.mood-status-text {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.error-box {
+  background-color: rgba(214, 69, 48, 0.1);
+  border: 1px solid rgba(214, 69, 48, 0.3);
+  color: #FFA396;
+  justify-content: space-between;
+}
+
+.mood-retry-btn {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(214, 69, 48, 0.4);
+  border-radius: var(--radius-sm);
+  color: var(--text-cream);
+  background-color: var(--accent-red);
+}
+
+/* Tonight's Pick Featured Card */
+.tonights-pick-card {
+  margin-top: 1.5rem;
+  background: linear-gradient(145deg, #1F1914 0%, #15110E 100%);
+  border: 2px solid var(--accent-amber);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px var(--accent-amber-glow);
+}
+
+.tonights-pick-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dashed var(--accent-amber-border);
+}
+
+.pick-badge-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.tonights-pick-badge {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: #0E0C0A;
+  background-color: var(--accent-amber);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+}
+
+.pick-ai-indicator {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-amber);
+  letter-spacing: 0.1em;
+}
+
+.pick-dismiss-btn {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.pick-dismiss-btn:hover {
+  color: var(--text-cream);
+  background-color: rgba(242, 169, 59, 0.15);
+}
+
+.tonights-pick-body {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.tonights-pick-poster-wrap {
+  width: 150px;
+  flex-shrink: 0;
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--accent-amber-border);
+}
+
+.tonights-pick-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tonights-pick-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #120F0D;
+  color: var(--accent-amber);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
+
+.tonights-pick-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.pick-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tonights-pick-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  color: var(--text-cream);
+  line-height: 1;
+}
+
+.tonights-pick-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-amber);
+}
+
+.tonights-pick-overview {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tonights-pick-actions {
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.pick-watch-toggle-btn {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  color: var(--text-cream);
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--accent-amber-border);
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.pick-watch-toggle-btn:hover {
+  border-color: var(--accent-amber);
+  background-color: rgba(242, 169, 59, 0.15);
+}
+
+@media (max-width: 640px) {
+  .mood-input-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .tonights-pick-body {
+    flex-direction: column;
+  }
+  .tonights-pick-poster-wrap {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+

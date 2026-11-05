@@ -1,0 +1,150 @@
+/* Sticky Top Header */
+.cinema-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(14, 12, 10, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--accent-amber-border);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
+  transition: background-color var(--transition-fast);
+}
+
+.cinema-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  height: 72px;
+}
+
+/* Brand Wordmark & Spool */
+.cinema-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--text-cream);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-film-spool {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spoolSpin 24s linear infinite;
+}
+
+@keyframes spoolSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.brand-wordmark {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  letter-spacing: 0.08em;
+  color: var(--text-cream);
+  line-height: 1;
+}
+
+.brand-dash {
+  color: var(--accent-amber);
+}
+
+/* Search bar center positioning */
+.cinema-header-search {
+  flex: 1;
+  max-width: 480px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Navigation Links */
+.cinema-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-shrink: 0;
+}
+
+.nav-link {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--accent-amber);
+}
+
+.nav-link-active {
+  color: var(--text-cream);
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0.6rem;
+  right: 0.6rem;
+  height: 2px;
+  background-color: var(--accent-amber);
+  box-shadow: 0 0 8px var(--accent-amber);
+}
+
+/* Watchlist Counter Badge */
+.nav-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid rgba(242, 169, 59, 0.2);
+  color: var(--text-muted);
+  line-height: 1;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.nav-badge.badge-has-items {
+  background-color: var(--accent-red);
+  color: var(--text-cream);
+  border-color: var(--accent-red);
+  box-shadow: 0 0 10px var(--accent-red-glow);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .cinema-header-inner {
+    height: auto;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .cinema-header-search {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .brand-wordmark {
+    font-size: 1.6rem;
+  }
+}
+

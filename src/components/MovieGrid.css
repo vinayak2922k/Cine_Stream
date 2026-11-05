@@ -1,0 +1,28 @@
+/* ==========================================================================
+   RESPONSIVE MOVIE TICKET GRID
+   repeat(auto-fill, minmax(190px, 1fr)) with generous gaps
+   ========================================================================== */
+
+.movie-ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1.75rem 1.5rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Extra small mobile adjustments */
+@media (max-width: 440px) {
+  .movie-ticket-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.25rem 0.9rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .movie-ticket-grid {
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 2rem 1.75rem;
+  }
+}
+
