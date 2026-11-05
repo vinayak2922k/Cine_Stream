@@ -113,6 +113,12 @@ img {
   }
 }
 
+.cine-stream-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 /* Accessibility: Respect Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

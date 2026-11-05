@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Favorites from './pages/Favorites';
 
@@ -39,6 +40,8 @@ export const App = () => {
         />
         <Route path="/favorites" element={<Favorites />} />
       </Routes>
+
+      <Footer />
     </div>
   );
 };
